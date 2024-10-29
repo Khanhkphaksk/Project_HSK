@@ -6,17 +6,21 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.BorderLayout;
 import javax.swing.JLabel;
 import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.ImageIcon;
 import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.LayoutStyle.ComponentPlacement;
 import javax.swing.JTextField;
 import javax.swing.JButton;
 
-public class From_ThongTinPhim1 extends JPanel {
+public class From_ThongTinPhim1 extends JPanel implements ActionListener{
 
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
@@ -24,6 +28,17 @@ public class From_ThongTinPhim1 extends JPanel {
 	private JTextField txtDaoDien;
 	private JTextField txtThoiLuong;
 	private JTextField txtMoTa;
+	private JButton btnThu2;
+	private JButton btnThu4;
+	private JButton btnThu6;
+	private JButton btnthu7;
+	private JButton btnchunhat;
+	private JButton btngioChieu1;
+	private JButton btngiocchieu2;
+	private JButton btngioChieu3;
+	private JButton btnGioChieu4;
+	private JButton btnGioChieu5;
+	private JButton btnNext;
 
 	/**
 	 * Launch the application.
@@ -107,42 +122,42 @@ public class From_ThongTinPhim1 extends JPanel {
 		JLabel lblNewLabel_4_1_1_1 = new JLabel("Lịch Chiếu: ");
 		lblNewLabel_4_1_1_1.setFont(new Font("Times New Roman", Font.BOLD, 20));
 		
-		JButton btnThu2 = new JButton("28/10 Thứ Hai");
+		btnThu2 = new JButton("28/10 Thứ Hai");
 		btnThu2.setFont(new Font("Times New Roman", Font.BOLD, 15));
 		
-		JButton btnThu4 = new JButton("30/10 Thứ Tư");
+		btnThu4 = new JButton("30/10 Thứ Tư");
 		btnThu4.setFont(new Font("Times New Roman", Font.BOLD, 15));
 		
-		JButton btnThu6 = new JButton("32/10 Thứ 6");
+		btnThu6 = new JButton("32/10 Thứ 6");
 		btnThu6.setFont(new Font("Times New Roman", Font.BOLD, 15));
 		
-		JButton btnthu7 = new JButton("33/10 Thứ 7");
+		btnthu7 = new JButton("33/10 Thứ 7");
 		btnthu7.setFont(new Font("Times New Roman", Font.BOLD, 15));
 		
-		JButton btnchunhat = new JButton("34/10 Chủ nhật");
+		btnchunhat = new JButton("34/10 Chủ nhật");
 		btnchunhat.setFont(new Font("Times New Roman", Font.BOLD, 15));
 		
 		JLabel lblNewLabel_4_1_1_1_1 = new JLabel("Giờ Chiếu: ");
 		lblNewLabel_4_1_1_1_1.setFont(new Font("Times New Roman", Font.BOLD, 20));
 		
-		JButton btngioChieu1 = new JButton("10:30");
+		btngioChieu1 = new JButton("10:30");
 		btngioChieu1.setFont(new Font("Times New Roman", Font.BOLD, 20));
 		
-		JButton btngiocchieu2 = new JButton("14:30");
+		btngiocchieu2 = new JButton("14:30");
 		btngiocchieu2.setFont(new Font("Times New Roman", Font.BOLD, 20));
 		
-		JButton btngioChieu3 = new JButton("17:30");
+		btngioChieu3 = new JButton("17:30");
 		btngioChieu3.setFont(new Font("Times New Roman", Font.BOLD, 20));
 		
-		JButton btnGioChieu4 = new JButton("19:30");
+		btnGioChieu4 = new JButton("19:30");
 		btnGioChieu4.setFont(new Font("Times New Roman", Font.BOLD, 20));
 		
-		JButton btnGioChieu5 = new JButton("22:30");
+		btnGioChieu5 = new JButton("22:30");
 		btnGioChieu5.setFont(new Font("Times New Roman", Font.BOLD, 20));
 		
-		JButton btnNewButton_1_5_1 = new JButton("Next");
-		btnNewButton_1_5_1.setIcon(new ImageIcon("src\\img\\arrow-circle-right.png"));
-		btnNewButton_1_5_1.setFont(new Font("Times New Roman", Font.BOLD, 20));
+		btnNext = new JButton("Next");
+		btnNext.setIcon(new ImageIcon("src\\img\\arrow-circle-right.png"));
+		btnNext.setFont(new Font("Times New Roman", Font.BOLD, 20));
 		GroupLayout gl_pnlCenter = new GroupLayout(pnlCenter);
 		gl_pnlCenter.setHorizontalGroup(
 			gl_pnlCenter.createParallelGroup(Alignment.LEADING)
@@ -201,7 +216,7 @@ public class From_ThongTinPhim1 extends JPanel {
 											.addComponent(btnchunhat, GroupLayout.PREFERRED_SIZE, 153, GroupLayout.PREFERRED_SIZE))
 										.addGroup(gl_pnlCenter.createSequentialGroup()
 											.addGap(121)
-											.addComponent(btnNewButton_1_5_1, GroupLayout.PREFERRED_SIZE, 112, GroupLayout.PREFERRED_SIZE)))))))
+											.addComponent(btnNext, GroupLayout.PREFERRED_SIZE, 112, GroupLayout.PREFERRED_SIZE)))))))
 					.addContainerGap(1089, Short.MAX_VALUE))
 		);
 		gl_pnlCenter.setVerticalGroup(
@@ -257,7 +272,7 @@ public class From_ThongTinPhim1 extends JPanel {
 						.addGroup(gl_pnlCenter.createParallelGroup(Alignment.BASELINE)
 							.addComponent(btnGioChieu4, GroupLayout.PREFERRED_SIZE, 35, GroupLayout.PREFERRED_SIZE)
 							.addComponent(btnGioChieu5, GroupLayout.PREFERRED_SIZE, 35, GroupLayout.PREFERRED_SIZE)
-							.addComponent(btnNewButton_1_5_1, GroupLayout.PREFERRED_SIZE, 35, GroupLayout.PREFERRED_SIZE)))
+							.addComponent(btnNext, GroupLayout.PREFERRED_SIZE, 35, GroupLayout.PREFERRED_SIZE)))
 					.addGap(71))
 		);
 		pnlCenter.setLayout(gl_pnlCenter);
@@ -265,6 +280,41 @@ public class From_ThongTinPhim1 extends JPanel {
 		JPanel pnlSouth = new JPanel();
 		pnlSouth.setBackground(new Color(64, 64, 64));
 		contentPane.add(pnlSouth, BorderLayout.SOUTH);
+		btnThu2.addActionListener(this);
+		
+		
+		btnNext.addActionListener(this);
+		btnThu2.addActionListener(this);
+		btnThu4.addActionListener(this);
+		btnThu6.addActionListener(this);
+		btnthu7.addActionListener(this);
+		btnchunhat.addActionListener(this);
+		
+		btngioChieu1.addActionListener(this);
+		btngiocchieu2.addActionListener(this);
+		btngioChieu3.addActionListener(this);
+		btnGioChieu4.addActionListener(this);
+		btnGioChieu5.addActionListener(this);
+		
 		add(contentPane);
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		Object o =e.getSource();
+		if(o.equals(btnNext)) {
+			 System.out.println("Next");
+		        
+		        // Xóa toàn bộ nội dung cũ và thêm giao diện mới
+		        contentPane.removeAll();
+		        contentPane.setPreferredSize(new Dimension(1100, 840));
+		        contentPane.add(new From_ChonGhe(), BorderLayout.CENTER);
+		        
+		        // Cập nhật lại giao diện
+		        contentPane.revalidate();
+		        contentPane.repaint();
+		}
+		
 	}
 }

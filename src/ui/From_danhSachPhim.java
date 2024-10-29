@@ -46,7 +46,7 @@ public class From_danhSachPhim extends JPanel implements ActionListener {
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
 		contentPane.setBackground(new Color(64, 64, 64));
-		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		
 		setSize(1100, 700);
 
 	
@@ -60,12 +60,12 @@ public class From_danhSachPhim extends JPanel implements ActionListener {
 //		JSeparator separator = new JSeparator(SwingConstants.HORIZONTAL);
 		
 		JLabel lblDS = new JLabel("Danh sách phim");
-		lblDS.setFont(new Font("Courier New", Font.BOLD, 20));
-		lblDS.setIcon(new ImageIcon("D:\\Hoc_Tap\\Nam3_HK1\\LT_SK_Java\\Team\\QuanLyRapChieuPhim\\src\\img\\list.png"));
+		lblDS.setFont(new Font("Times New Roman", Font.BOLD, 20));
+		lblDS.setIcon(new ImageIcon("src\\img\\list.png"));
 		lblDS.setForeground(Color.BLACK);
 		
 		JLabel lblNewLabel = new JLabel("Tìm kiếm phim:");
-		lblNewLabel.setFont(new Font("Courier New", Font.BOLD, 20));
+		lblNewLabel.setFont(new Font("Times New Roman", Font.BOLD, 20));
 		lblNewLabel.setForeground(Color.BLACK);
 		
 		textTimPHim = new JTextField();
@@ -80,24 +80,27 @@ public class From_danhSachPhim extends JPanel implements ActionListener {
 				.addGroup(gl_pnlNorth.createSequentialGroup()
 					.addGap(26)
 					.addComponent(lblDS)
-					.addPreferredGap(ComponentPlacement.RELATED, 476, Short.MAX_VALUE)
+					.addPreferredGap(ComponentPlacement.RELATED, 407, Short.MAX_VALUE)
 					.addComponent(lblNewLabel)
-					.addGap(32)
+					.addPreferredGap(ComponentPlacement.UNRELATED)
 					.addComponent(textTimPHim, GroupLayout.PREFERRED_SIZE, 166, GroupLayout.PREFERRED_SIZE)
-					.addGap(18)
+					.addPreferredGap(ComponentPlacement.UNRELATED)
 					.addComponent(btnNewButton)
-					.addGap(143))
+					.addGap(44))
 		);
 		gl_pnlNorth.setVerticalGroup(
 			gl_pnlNorth.createParallelGroup(Alignment.LEADING)
 				.addGroup(gl_pnlNorth.createSequentialGroup()
 					.addContainerGap()
-					.addGroup(gl_pnlNorth.createParallelGroup(Alignment.BASELINE)
-						.addComponent(lblDS)
-						.addComponent(textTimPHim, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-						.addComponent(lblNewLabel)
-						.addComponent(btnNewButton))
+					.addComponent(lblDS)
 					.addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+				.addGroup(Alignment.TRAILING, gl_pnlNorth.createSequentialGroup()
+					.addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+					.addGroup(gl_pnlNorth.createParallelGroup(Alignment.BASELINE)
+						.addComponent(btnNewButton)
+						.addComponent(textTimPHim, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+						.addComponent(lblNewLabel))
+					.addContainerGap())
 		);
 		pnlNorth.setLayout(gl_pnlNorth);
 		
@@ -114,20 +117,23 @@ public class From_danhSachPhim extends JPanel implements ActionListener {
 		pnlPhim6.setBackground(Color.DARK_GRAY);
 		
 		btnDatVe3 = new JButton("Mua Vé");
+		btnDatVe3.setFont(new Font("Times New Roman", Font.BOLD, 13));
 		btnDatVe3.setBackground(new Color(255, 69, 0));
 		
 		JLabel lblNewLabel_5_1 = new JLabel("Thời Lượng: 113 Phút");
+		lblNewLabel_5_1.setFont(new Font("Times New Roman", Font.BOLD, 11));
 		lblNewLabel_5_1.setForeground(Color.WHITE);
 		
 		JLabel lblNewLabel_4_1 = new JLabel("Thể loại: Hoạt Hình");
+		lblNewLabel_4_1.setFont(new Font("Times New Roman", Font.BOLD, 11));
 		lblNewLabel_4_1.setForeground(Color.WHITE);
 		
 		JLabel lblNewLabel_3_1 = new JLabel("TransFormer một");
 		lblNewLabel_3_1.setForeground(Color.WHITE);
-		lblNewLabel_3_1.setFont(new Font("Courier New", Font.BOLD, 16));
+		lblNewLabel_3_1.setFont(new Font("Times New Roman", Font.BOLD, 18));
 		
 		JLabel lblNewLabel_2_1 = new JLabel("");
-		lblNewLabel_2_1.setIcon(new ImageIcon("D:\\Hoc_Tap\\Nam3_HK1\\LT_SK_Java\\Team\\QuanLyRapChieuPhim\\src\\img\\List_TransFormers.jpg"));
+		lblNewLabel_2_1.setIcon(new ImageIcon("src\\img\\List_TransFormers.jpg"));
 		lblNewLabel_2_1.setForeground(Color.WHITE);
 		GroupLayout gl_pnlPhim6 = new GroupLayout(pnlPhim6);
 		gl_pnlPhim6.setHorizontalGroup(
@@ -171,20 +177,23 @@ public class From_danhSachPhim extends JPanel implements ActionListener {
 		pnlPhim7.setBackground(Color.DARK_GRAY);
 		
 		btnDatVe4 = new JButton("Mua Vé");
+		btnDatVe4.setFont(new Font("Times New Roman", Font.BOLD, 13));
 		btnDatVe4.setBackground(new Color(255, 69, 0));
 		
 		JLabel lblNewLabel_5_2 = new JLabel("Thời Lượng: 134 phút");
+		lblNewLabel_5_2.setFont(new Font("Times New Roman", Font.BOLD, 11));
 		lblNewLabel_5_2.setForeground(Color.WHITE);
 		
 		JLabel lblNewLabel_4_2 = new JLabel("Thể loại: Hoạt Hình");
+		lblNewLabel_4_2.setFont(new Font("Times New Roman", Font.BOLD, 11));
 		lblNewLabel_4_2.setForeground(Color.WHITE);
 		
 		JLabel lblNewLabel_3_2 = new JLabel("Bạch Xà 3");
 		lblNewLabel_3_2.setForeground(Color.WHITE);
-		lblNewLabel_3_2.setFont(new Font("Courier New", Font.BOLD, 18));
+		lblNewLabel_3_2.setFont(new Font("Times New Roman", Font.BOLD, 18));
 		
 		JLabel lblNewLabel_2_2 = new JLabel("");
-		lblNewLabel_2_2.setIcon(new ImageIcon("D:\\Hoc_Tap\\Nam3_HK1\\LT_SK_Java\\Team\\QuanLyRapChieuPhim\\src\\img\\BachXa3.jpg"));
+		lblNewLabel_2_2.setIcon(new ImageIcon("src\\img\\BachXa3.jpg"));
 		lblNewLabel_2_2.setForeground(Color.WHITE);
 		GroupLayout gl_pnlPhim7 = new GroupLayout(pnlPhim7);
 		gl_pnlPhim7.setHorizontalGroup(
@@ -228,20 +237,23 @@ public class From_danhSachPhim extends JPanel implements ActionListener {
 		pnlPhim2.setBackground(Color.DARK_GRAY);
 		
 		btnDatVe5 = new JButton("Mua Vé");
+		btnDatVe5.setFont(new Font("Times New Roman", Font.BOLD, 13));
 		btnDatVe5.setBackground(new Color(255, 69, 0));
 		
 		JLabel lblNewLabel_5_4 = new JLabel("Thời Lượng: 143 phút");
+		lblNewLabel_5_4.setFont(new Font("Times New Roman", Font.BOLD, 11));
 		lblNewLabel_5_4.setForeground(Color.WHITE);
 		
 		JLabel lblNewLabel_4_4 = new JLabel("Thể loại: Kinh Di");
+		lblNewLabel_4_4.setFont(new Font("Times New Roman", Font.BOLD, 11));
 		lblNewLabel_4_4.setForeground(Color.WHITE);
 		
 		JLabel lblNewLabel_3_4 = new JLabel("Quỷ Ăn Tạng");
 		lblNewLabel_3_4.setForeground(Color.WHITE);
-		lblNewLabel_3_4.setFont(new Font("Courier New", Font.BOLD, 18));
+		lblNewLabel_3_4.setFont(new Font("Times New Roman", Font.BOLD, 18));
 		
 		JLabel lblNewLabel_2_4 = new JLabel("");
-		lblNewLabel_2_4.setIcon(new ImageIcon("D:\\Hoc_Tap\\Nam3_HK1\\LT_SK_Java\\Team\\QuanLyRapChieuPhim\\src\\img\\QuyAnTang2.jpg"));
+		lblNewLabel_2_4.setIcon(new ImageIcon("src\\img\\QuyAnTang2.jpg"));
 		lblNewLabel_2_4.setForeground(Color.WHITE);
 		GroupLayout gl_pnlPhim2 = new GroupLayout(pnlPhim2);
 		gl_pnlPhim2.setHorizontalGroup(
@@ -285,20 +297,23 @@ public class From_danhSachPhim extends JPanel implements ActionListener {
 		pnlPhim5.setBackground(Color.DARK_GRAY);
 		
 		btnDatVe7 = new JButton("Mua Vé");
+		btnDatVe7.setFont(new Font("Times New Roman", Font.BOLD, 13));
 		btnDatVe7.setBackground(new Color(255, 69, 0));
 		
 		JLabel lblNewLabel_5_5 = new JLabel("Thời Lượng: 111 phút");
+		lblNewLabel_5_5.setFont(new Font("Times New Roman", Font.BOLD, 11));
 		lblNewLabel_5_5.setForeground(Color.WHITE);
 		
 		JLabel lblNewLabel_4_5 = new JLabel("Thể loại: Kinh Dị");
+		lblNewLabel_4_5.setFont(new Font("Times New Roman", Font.BOLD, 11));
 		lblNewLabel_4_5.setForeground(Color.WHITE);
 		
 		JLabel lblNewLabel_3_5 = new JLabel("Cám");
 		lblNewLabel_3_5.setForeground(Color.WHITE);
-		lblNewLabel_3_5.setFont(new Font("Courier New", Font.BOLD, 18));
+		lblNewLabel_3_5.setFont(new Font("Times New Roman", Font.BOLD, 20));
 		
 		JLabel lblNewLabel_2_5 = new JLabel("");
-		lblNewLabel_2_5.setIcon(new ImageIcon("D:\\Hoc_Tap\\Nam3_HK1\\LT_SK_Java\\Team\\QuanLyRapChieuPhim\\src\\img\\Cam.jpg"));
+		lblNewLabel_2_5.setIcon(new ImageIcon("src\\img\\Cam.jpg"));
 		lblNewLabel_2_5.setForeground(Color.WHITE);
 		GroupLayout gl_pnlPhim5 = new GroupLayout(pnlPhim5);
 		gl_pnlPhim5.setHorizontalGroup(
@@ -342,20 +357,23 @@ public class From_danhSachPhim extends JPanel implements ActionListener {
 		pnlPhim8.setBackground(Color.DARK_GRAY);
 		
 		btnDatVe8 = new JButton("Mua Vé");
+		btnDatVe8.setFont(new Font("Times New Roman", Font.BOLD, 11));
 		btnDatVe8.setBackground(new Color(255, 69, 0));
 		
 		JLabel lblNewLabel_5_6 = new JLabel("Thời Lượng: 112 phút");
+		lblNewLabel_5_6.setFont(new Font("Times New Roman", Font.BOLD, 11));
 		lblNewLabel_5_6.setForeground(Color.WHITE);
 		
 		JLabel lblNewLabel_4_6 = new JLabel("Thể loại: Hành Động");
+		lblNewLabel_4_6.setFont(new Font("Times New Roman", Font.BOLD, 11));
 		lblNewLabel_4_6.setForeground(Color.WHITE);
 		
 		JLabel lblNewLabel_3_6 = new JLabel("Quán Vật VENOM");
 		lblNewLabel_3_6.setForeground(Color.WHITE);
-		lblNewLabel_3_6.setFont(new Font("Courier New", Font.BOLD, 18));
+		lblNewLabel_3_6.setFont(new Font("Times New Roman", Font.BOLD, 18));
 		
 		JLabel lblNewLabel_2_6 = new JLabel("");
-		lblNewLabel_2_6.setIcon(new ImageIcon("D:\\Hoc_Tap\\Nam3_HK1\\LT_SK_Java\\Team\\QuanLyRapChieuPhim\\src\\img\\Venom.jpg"));
+		lblNewLabel_2_6.setIcon(new ImageIcon("src\\img\\Venom.jpg"));
 		lblNewLabel_2_6.setForeground(Color.WHITE);
 		GroupLayout gl_pnlPhim8 = new GroupLayout(pnlPhim8);
 		gl_pnlPhim8.setHorizontalGroup(
@@ -399,20 +417,23 @@ public class From_danhSachPhim extends JPanel implements ActionListener {
 		pnlPhim4.setBackground(Color.DARK_GRAY);
 		
 		JLabel lblNewLabel_5_3 = new JLabel("Thời Lượng:121 phút");
+		lblNewLabel_5_3.setFont(new Font("Times New Roman", Font.BOLD, 11));
 		lblNewLabel_5_3.setForeground(Color.WHITE);
 		
 		JLabel lblNewLabel_4_3 = new JLabel("Thể loại: Kinh Dị");
+		lblNewLabel_4_3.setFont(new Font("Times New Roman", Font.BOLD, 11));
 		lblNewLabel_4_3.setForeground(Color.WHITE);
 		
 		JLabel lblNewLabel_3_3 = new JLabel("KUMMATHONG");
 		lblNewLabel_3_3.setForeground(Color.WHITE);
-		lblNewLabel_3_3.setFont(new Font("Courier New", Font.BOLD, 18));
+		lblNewLabel_3_3.setFont(new Font("Times New Roman", Font.BOLD, 18));
 		
 		JLabel lblNewLabel_2_3 = new JLabel("");
-		lblNewLabel_2_3.setIcon(new ImageIcon("D:\\Hoc_Tap\\Nam3_HK1\\LT_SK_Java\\Team\\QuanLyRapChieuPhim\\src\\img\\LIST_KUMATHONG.jpg"));
+		lblNewLabel_2_3.setIcon(new ImageIcon("src\\img\\LIST_KUMATHONG.jpg"));
 		lblNewLabel_2_3.setForeground(Color.WHITE);
 		
 		btnDatVe2 = new JButton("Mua Vé");
+		btnDatVe2.setFont(new Font("Times New Roman", Font.BOLD, 13));
 		btnDatVe2.setBackground(new Color(255, 69, 0));
 		GroupLayout gl_pnlPhim4 = new GroupLayout(pnlPhim4);
 		gl_pnlPhim4.setHorizontalGroup(
@@ -456,20 +477,23 @@ public class From_danhSachPhim extends JPanel implements ActionListener {
 		pnlPhim3.setBackground(Color.DARK_GRAY);
 		
 		JLabel lblNewLabel_5_7 = new JLabel("Thời Lượng: 123 phút");
+		lblNewLabel_5_7.setFont(new Font("Times New Roman", Font.BOLD, 11));
 		lblNewLabel_5_7.setForeground(Color.WHITE);
 		
 		JLabel lblNewLabel_4_7 = new JLabel("Thể loại: Tâm Lý");
+		lblNewLabel_4_7.setFont(new Font("Times New Roman", Font.BOLD, 11));
 		lblNewLabel_4_7.setForeground(Color.WHITE);
 		
 		JLabel lblNewLabel_3_7 = new JLabel("JOKER");
 		lblNewLabel_3_7.setForeground(Color.WHITE);
-		lblNewLabel_3_7.setFont(new Font("Courier New", Font.BOLD, 18));
+		lblNewLabel_3_7.setFont(new Font("Times New Roman", Font.BOLD, 18));
 		
 		JLabel lblNewLabel_2_7 = new JLabel("");
-		lblNewLabel_2_7.setIcon(new ImageIcon("D:\\Hoc_Tap\\Nam3_HK1\\LT_SK_Java\\Team\\QuanLyRapChieuPhim\\src\\img\\Joker.jpg"));
+		lblNewLabel_2_7.setIcon(new ImageIcon("src\\img\\Joker.jpg"));
 		lblNewLabel_2_7.setForeground(Color.WHITE);
 		
 		btnDatVe6 = new JButton("Mua Vé");
+		btnDatVe6.setFont(new Font("Times New Roman", Font.BOLD, 13));
 		btnDatVe6.setBackground(new Color(255, 69, 0));
 		GroupLayout gl_pnlPhim3 = new GroupLayout(pnlPhim3);
 		gl_pnlPhim3.setHorizontalGroup(
@@ -551,20 +575,23 @@ public class From_danhSachPhim extends JPanel implements ActionListener {
 		);
 		
 		JLabel lblNewLabel_2 = new JLabel("");
-		lblNewLabel_2.setIcon(new ImageIcon("D:\\Hoc_Tap\\Nam3_HK1\\LT_SK_Java\\Team\\QuanLyRapChieuPhim\\src\\img\\list_MoDomDom.jpg"));
+		lblNewLabel_2.setIcon(new ImageIcon("src\\img\\list_MoDomDom.jpg"));
 		lblNewLabel_2.setForeground(Color.WHITE);
 		
 		JLabel lblNewLabel_3 = new JLabel("Mộ Đom Đóm");
 		lblNewLabel_3.setForeground(Color.WHITE);
-		lblNewLabel_3.setFont(new Font("Courier New", Font.BOLD, 18));
+		lblNewLabel_3.setFont(new Font("Times New Roman", Font.BOLD, 18));
 		
 		JLabel lblNewLabel_4 = new JLabel("Thể loại: Hoạt Hình");
+		lblNewLabel_4.setFont(new Font("Times New Roman", Font.BOLD, 11));
 		lblNewLabel_4.setForeground(Color.WHITE);
 		
 		JLabel lblNewLabel_5 = new JLabel("Thời Lượng: 89 phút");
+		lblNewLabel_5.setFont(new Font("Times New Roman", Font.BOLD, 11));
 		lblNewLabel_5.setForeground(Color.WHITE);
 		
 		btnDatVe1 = new JButton("Mua Vé");
+		btnDatVe1.setFont(new Font("Times New Roman", Font.BOLD, 13));
 		btnDatVe1.setBackground(new Color(255, 69, 0));
 		GroupLayout gl_pnlPhim1 = new GroupLayout(pnlPhim1);
 		gl_pnlPhim1.setHorizontalGroup(
